@@ -1,9 +1,8 @@
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy_serializer import SerializerMixin
 
 db = SQLAlchemy()
 
-class Newsletter(db.Model, SerializerMixin):
+class Newsletter(db.Model):
     __tablename__ = 'newsletters'
 
     id = db.Column(db.Integer, primary_key=True)
